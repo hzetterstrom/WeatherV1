@@ -6,5 +6,5 @@ timestamp: 2016-09-27T15:08:10.1014906-04:00
 What temperature is it in [Alaska](City) right now?
 * ask_current_weather/temperature
 
-< It's [44](temperature) degrees in [Alaska](city) at the moment
+< It's [44](temperature) degrees in [Alaska](City) at the moment
 * provide_weather/current
