@@ -81,7 +81,7 @@ const provideWeather = client.createStep({
       // configure responses to be automatically sent as predicted by the machine learning model
    // },
     streams: {
-    main: 'getWeather',
+    main: 'hi',
     hi: [sayHello],
     getWeather: [collectCity, provideWeather],
   }
