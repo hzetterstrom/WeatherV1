@@ -7,9 +7,20 @@ exports.handle = function handle(client) {
     return Boolean(client.getConversationState().weatherCity)
   },
 
+  extractInfo() {
+    const city = firstOfEntityRole(client.getMessagePart(), 'city')
+
+    if (city) {
+      client.updateConversationState({
+        weatherCity: city,
+      })
+
+      console.log('User wants the weather in:', city.value)
+    }
+  },
+
   prompt() {
-    // Need to prompt user for city    
-    console.log('Need to ask user for city')
+    client.addResponse('app:response:name:prompt/weather_city')
     client.done()
   },
 })
